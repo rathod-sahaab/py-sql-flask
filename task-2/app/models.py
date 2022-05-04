@@ -20,3 +20,25 @@ class Employee(db.Model):
 
     def __repr__(self):
         return f'<Employee {self.employee_id} - {self.first_name} {self.last_name}>'
+
+    def to_dict(self):
+        # TODO: add options to hide/show some fields data
+        data = {
+            'employee_id': self.employee_id,
+            'last_name': self.last_name,
+            'first_name': self.first_name,
+            'title': self.title,
+            'reports_to': self.reports_to,
+            'birth_date': self.birth_date,
+            'hire_date': self.hire_date,
+            'address': self.address,
+            'city': self.city,
+            'state': self.state,
+            'country': self.country,
+            'postal_code': self.postal_code,
+            'phone': self.phone,
+            'fax': self.fax,
+            'email': self.email
+        }
+
+        return data
