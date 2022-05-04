@@ -19,4 +19,4 @@ class Employee(db.Model):
     email = db.Column('Email', db.String(60), index=True, unique=True)
 
     def __repr__(self):
-        return f'<Employee {self.id} - {self.first_name} {self.last_name}>'
+        return f'<Employee {self.employee_id} - {self.first_name} {self.last_name}>'
